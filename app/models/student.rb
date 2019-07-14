@@ -16,7 +16,8 @@ class Student < ActiveRecord::Base
 
   def self.search(search)
     if search
-      self.all.collect {|s| s if s.name.include?(search)}.compact
+      name = Student.all.collect {|s| s if s.name.downcase.include?(search.downcase)}.compact
+      name.empty? ? self.all : name
     else
       self.all
     end
