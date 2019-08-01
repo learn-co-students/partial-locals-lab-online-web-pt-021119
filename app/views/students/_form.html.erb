@@ -1,15 +1,15 @@
-<%= form_for @student do |f|%>
+<%= form_for(student) do |n|%>
 <p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= n.label :name %>
+  <%= n.text_field :name %>
 </p>
 <p>
-  <%= f.label :hometown %>
-  <%= f.text_field :hometown %>
+  <%= n.label :hometown %>
+  <%= n.text_field :hometown %>
 </p>
 <p>
-  <%= f.label :birthday %>
-  <%= f.date_field :birthday %>
+  <%= n.label :birthday %>
+  <%= n.date_field :birthday %>
 </p>
-  <%= f.submit %>
+  <%= n.submit %>
 <% end %>
