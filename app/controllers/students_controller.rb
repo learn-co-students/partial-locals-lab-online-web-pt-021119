@@ -10,7 +10,8 @@ class StudentsController < ApplicationController
 
   def create
     if params[:search]
-      @students = Student.search(search) 
+      search = params[:search]
+      @students = Student.search(search)
       render 'index'
     else
       @student = Student.new(student_params)
